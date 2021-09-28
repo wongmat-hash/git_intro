@@ -1,4 +1,4 @@
 Matthew Wong
 wongmat@oregonstate.edu
-yellow
+Yellow
 The Who

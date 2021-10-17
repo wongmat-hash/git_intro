@@ -21,7 +21,7 @@ class TestCase(unittest.TestCase):
         self.assertEqual(credit_card_validator('2720995085393011'), True)
 
     # validates Amex cards checks the prefix 34 or 37 and correct length of 16
-    # picked using category partition testing 
+    # picked using category partition testing
     def testBugFour(self):
         self.assertEqual(credit_card_validator('370600982683046'), True)
 

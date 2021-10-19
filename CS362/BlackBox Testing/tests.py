@@ -6,16 +6,16 @@ from credit_card_validator import credit_card_validator
 class TestCase(unittest.TestCase):
 
     # validates error case if there is no input given invalid check returns F
-    # picked using category partition testing
+    # picked using error guessing technique
     def testBugOne(self):
         self.assertEqual(credit_card_validator(''), True)
 
     # validates Visa cards checks for corect prefix and length invalid = F
-    # picked using category partition testing
+    # picked using category partition testing + boundary value testing
     def testBugTwo(self):
         self.assertEqual(credit_card_validator('452100934314023'), True)
 
-    # checks against Mastercards checks for outside prefixs and length of 16
+    # checks against Mastercards checks prefixs and length of 16
     # picked using category partition testing
     def testBugThree(self):
         self.assertEqual(credit_card_validator('2720995085393011'), True)
@@ -26,7 +26,7 @@ class TestCase(unittest.TestCase):
         self.assertEqual(credit_card_validator('370600982683046'), True)
 
     # validates Amex cards checks the prefix and for incorrect length of 15
-    # picked using category partition testing
+    # picked using category partition testing (checking length)
     def testBugFive(self):
         self.assertEqual(credit_card_validator('3496626767003111'), True)
 

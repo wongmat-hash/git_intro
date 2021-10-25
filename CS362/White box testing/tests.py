@@ -6,6 +6,7 @@ from contrived_func import contrived_func
 class TestCase(unittest.TestCase):
 
     # asserts equal to the contrived function with true passing in
+    # x is declaration variable we can set to anything 
     def test1(self):
         x = 5
         self.assertEqual(contrived_func(x), 1)
@@ -29,6 +30,7 @@ class TestCase(unittest.TestCase):
     def test7(self):
         x = 49
         self.assertEqual(contrived_func(x), 0)
+
 
 if __name__ == '__main__':
     unittest.main()

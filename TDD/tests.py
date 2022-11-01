@@ -17,7 +17,8 @@ from check_pwd import check_pwd
 class TestCase(unittest.TestCase):
 
     def test_one(self):
-
+        input = ''
+        self.assertEqual(check_pwd(input), True)
 
 if __name__ == "__main__":
     unittest.main()

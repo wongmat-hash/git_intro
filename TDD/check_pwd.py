@@ -12,8 +12,10 @@
 # Write second test...
 
 def check_pwd(string):
-    return False
-
+    if len(string) == 0:
+        return False
+    else:
+        return True
 # requirements for True
 # Must be between 8 and 20 characters (inclusive)
 # Must contain at least one lowercase letter

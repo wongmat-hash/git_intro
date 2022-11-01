@@ -24,7 +24,7 @@ class TestCase(unittest.TestCase):
     # this test checks for under 8 char in length
     def test2(self):
         input = '1234567'
-        self.assertEqual(check_pwd(input), True)
+        self.assertEqual(check_pwd(input), False)
 
 
 if __name__ == "__main__":

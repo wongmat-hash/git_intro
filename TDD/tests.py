@@ -16,9 +16,16 @@ from check_pwd import check_pwd
 
 class TestCase(unittest.TestCase):
 
-    def test_one(self):
+    # this test checks that an empty string is handled correctly by check_pwd
+    def test1(self):
         input = ''
         self.assertEqual(check_pwd(input), True)
+
+    # this test checks for under 8 char in length
+    def test2(self):
+        input = '1234567'
+        self.assertEqual(check_pwd(input), True)
+
 
 if __name__ == "__main__":
     unittest.main()
